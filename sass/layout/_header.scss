@@ -1,0 +1,19 @@
+/* --------------------header-logo----------------------- */
+.logo {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  color: var(--active-color);
+  display: block;
+}
+.logo-header {
+  padding-top: 24px;
+  padding-bottom: 25px;
+}
+
+.logo-dark > span {
+  color: var(--logo-dark-color);
+}

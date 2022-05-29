@@ -1,0 +1,17 @@
+@import "./base/reset";
+@import "./base/settings.scss";
+
+@import "./layout/header";
+@import "./layout/clients";
+@import "./layout/footer";
+@import "./layout/navigation";
+@import "./layout/hero";
+@import "./layout/goals";
+@import "./layout/cases";
+@import "./layout/team";
+@import "./layout/modal";
+@import "./layout/portfolio";
+
+@import "./utils/vars";
+
+@import "./components/container";
