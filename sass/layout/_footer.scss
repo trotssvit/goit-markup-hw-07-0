@@ -1,16 +1,3 @@
-/*-------------------------- footer styles ---------------------*/
-.footer-space .container {
-  display: flex;
-}
-.footer-space {
-  background-color: var(--footer-bg-color);
-  padding-bottom: 60px;
-  padding-top: 60px;
-  padding-left: 0;
-  display: flex;
-
-  align-items: flex-start;
-}
 /* ---------------------------footer-logo---------------------- */
 /* -------------------------footer address links----------------- */
 .address .link {
@@ -25,8 +12,7 @@
 
   padding-left: 0;
 
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %transition;
 }
 
 .address-link {
@@ -40,8 +26,7 @@
 
   margin-bottom: 9px;
   display: block;
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %transition;
 }
 
 .address .address-map:not(:last-child) {
@@ -92,8 +77,8 @@
   align-items: baseline;
 }
 
-.footer-soc-link:hover,
-.footer-soc-link:focus {
+.social-network__links:hover,
+.social-network__links:focus {
   background-color: var(--active-color);
 }
 .address-links {
@@ -147,8 +132,7 @@
   left: 16px;
   transform: translateY(-50%);
 
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %transition;
 }
 
 .mailing {
@@ -187,22 +171,18 @@
   justify-content: center;
   padding: 0px;
 
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %transition;
   cursor: pointer;
 }
 .icon-submit {
   fill: var(--active-color-letters);
   margin-left: 10px;
 
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %transition;
   &:hover,
   &:focus {
     background-color: var(--hero-button-bg);
   }
-  
-
 }
 .mailing-text {
   font-style: normal;
@@ -251,8 +231,7 @@
   left: 16px;
   transform: translateY(-50%);
 
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %transition;
 }
 
 .mailing {
@@ -262,8 +241,8 @@
   margin-top: 12px;
 }
 
-.input-email:focus+.email,
-.input-email:not(:placeholder-shown)+.email {
+.input-email:focus + .email,
+.input-email:not(:placeholder-shown) + .email {
   transform: translateY(-45px);
 }
 
@@ -293,8 +272,7 @@
   justify-content: center;
   padding: 0px;
 
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %transition;
   cursor: pointer;
 
   &:hover,
@@ -307,7 +285,5 @@
   fill: var(--active-color-letters);
   margin-left: 10px;
 
-  transition-duration: 250ms;
-  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %transition;
 }
-

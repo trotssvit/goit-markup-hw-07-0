@@ -1,85 +1,79 @@
 .header {
-    border-bottom: 1px solid var(--line-under-hero);
-    .container {
-        display: flex;
-        align-items: center;
-    }
-    
+  border-bottom: 1px solid var(--line-under-hero);
+  .container {
+    display: flex;
+    align-items: center;
+  }
 }
 
-
 .site-nav {
-    display: flex;
-    padding-left: 93px;
+  display: flex;
+  padding-left: 93px;
 }
 
 .site-nav__item {
-    display: block;
-    text-align: center;
+  display: block;
+  text-align: center;
 }
 
 .site-nav__link {
-    padding-bottom: 32px;
-    padding-top: 32px;
+  padding-bottom: 32px;
+  padding-top: 32px;
 
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %transition;
 }
 
 .site-nav__item:not(:last-child) {
-    margin-right: 50px;
+  margin-right: 50px;
 }
 
 .mail-icon {
-    width: 16px;
-    height: 12px;
-    margin-right: 10px;
-    fill: var(--address-link-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  width: 16px;
+  height: 12px;
+  margin-right: 10px;
+  fill: var(--address-link-color);
+  @extend %transition;
+
+  .contacts-mail:hover &,
+  .contacts-mail:focus & {
+    fill: var(--active-color);
+  }
 }
 
 .tel-icon {
-    width: 10px;
-    height: 16px;
-    margin-right: 10px;
-    fill: var(--address-link-color);
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  width: 10px;
+  height: 16px;
+  margin-right: 10px;
+  fill: var(--address-link-color);
+  @extend %transition;
+
+  .contacts-tel:hover &,
+  .contacts-tel:focus & {
+    fill: var(--active-color);
+  }
 }
 
 .page-nav {
-    display: flex;
+  display: flex;
 }
 
 .site-nav__link {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 
-    color: var(--nav-button-color);
-    text-decoration: none;
-    font-family: inherit;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+  color: var(--nav-button-color);
+  text-decoration: none;
+  font-family: inherit;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 
-    cursor: pointer;
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  cursor: pointer;
+  @extend %transition;
 
-    &:hover,
-&:focus,
-.current,
-.current::after {
-    color: var(--active-color);
-    opacity: 1;
-}
-
-}
-
-.site-nav__link::after {
+  &::after {
     content: '';
     position: absolute;
     background: var(--active-color);
@@ -90,54 +84,48 @@
     bottom: -1px;
     transform: translateX(-50%);
     opacity: 0;
+  }
+}
+.site-nav__link:hover,
+.site-nav__link:focus,
+.site-nav__link.current,
+.site-nav__link.current::after {
+  color: var(--active-color);
+  opacity: 1;
 }
 
 .contacts.list {
-    display: inline-flex;
-}
-
-
-
-.contacts-mail:hover .mail-icon,
-.contacts-mail:focus .mail-icon {
-    fill: var(--active-color);
-}
-
-.contacts-tel:hover .tel-icon,
-.contacts-tel:focus .tel-icon {
-    fill: var(--active-color);
+  display: inline-flex;
 }
 
 .contacts-link {
-    color: var(--contacts-link-color);
-    font-family: inherit;
-    list-style: none;
-    text-decoration: none;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.02em;
+  color: var(--contacts-link-color);
+  font-family: inherit;
+  list-style: none;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
 
-    display: flex;
-    align-items: center;
-    padding-top: 32px;
-    padding-bottom: 32px;
+  display: flex;
+  align-items: center;
+  padding-top: 32px;
+  padding-bottom: 32px;
 
-    transition-duration: 250ms;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  @extend %transition;
 
-    &:hover,
-&:focus {
+  &:hover,
+  &:focus {
     color: var(--active-color);
-}
-
+  }
 }
 
 .contacts {
-    margin-left: auto;
-    align-items: center;
+  margin-left: auto;
+  align-items: center;
 }
 
 .contacts-mail {
-    margin-right: 50px;
+  margin-right: 50px;
 }
