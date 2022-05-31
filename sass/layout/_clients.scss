@@ -47,22 +47,25 @@
     justify-content: center;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.clients-a:hover {
+    &:hover {
     border-color: var(--active-color);
     cursor: pointer;
 }
 
-.clients-a:hover .clients-net {
+&:hover .clients-net {
     fill: var(--active-color);
 }
-
-.clients-a:focus {
+&:focus {
     border-color: var(--active-color);
 }
 
-.clients-a:focus .clients-net {
+&:focus .clients-net {
     border-color: var(--active-color);
     fill: var(--active-color);
 }
+
+}
+
+
+

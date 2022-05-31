@@ -13,11 +13,13 @@
 .pictures {
     display: flex;
     padding-bottom: 94px;
-}
 
-.pictures .pictures-img:not(:last-child) {
+
+   .pictures-img:not(:last-child) {
     margin-right: 30px;
 }
+}
+
 
 .pictures-img {
     position: relative;

@@ -12,15 +12,6 @@
   align-items: flex-start;
 }
 /* ---------------------------footer-logo---------------------- */
-.logo__light {
-  display: inline-block;
-  padding-left: 0;
-  margin-bottom: 20px;
-}
-
-.logo__light > span {
-  color: var(--logo-footer-color);
-}
 /* -------------------------footer address links----------------- */
 .address .link {
   list-style: none;
@@ -77,9 +68,6 @@
   letter-spacing: 0.03em;
 
   margin-bottom: 20px;
-}
-.social-network__links--dark {
-  background-color: rgba(255, 255, 255, 0.1);
 }
 .footer-net {
   fill: var(--active-color-letters);
@@ -209,10 +197,12 @@
 
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.button-submit:hover,
-.button-submit:focus {
-  background-color: var(--hero-button-bg);
+  &:hover,
+  &:focus {
+    background-color: var(--hero-button-bg);
+  }
+  
+
 }
 .mailing-text {
   font-style: normal;
@@ -306,6 +296,11 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
+
+  &:hover,
+  &:focus {
+    background-color: var(--hero-button-bg);
+  }
 }
 
 .icon-submit {
@@ -316,7 +311,3 @@
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.button-submit:hover,
-.button-submit:focus {
-  background-color: var(--hero-button-bg);
-}

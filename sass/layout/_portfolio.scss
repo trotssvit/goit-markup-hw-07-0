@@ -30,22 +30,24 @@
     border-radius: 4px;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+
+    &:hover,
+    &:focus {
+        color: var(--active-color-letters);
+        background-color: var(--active-color);
+    }
+    .current {
+        background: var(--active-color);
+        color: var(--active-color-letters);
+    }
+    
 }
 
 .button-item:not(:last-child) {
     padding-right: 8px;
 }
 
-.button-portfolio:hover,
-.button-portfolio:focus {
-    color: var(--active-color-letters);
-    background-color: var(--active-color);
-}
 
-.button-portfolio.current {
-    background: var(--active-color);
-    color: var(--active-color-letters);
-}
 
 /* ------------------portfolio content--------------------------------- */
 .profile.list {
@@ -144,10 +146,10 @@
     text-decoration: none;
     transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.profile-card:hover,
-.profile-card:focus {
+    &:hover,
+&:focus {
     box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
         0px 1px 1px rgba(0, 0, 0, 0.12);
 }
+}
+
